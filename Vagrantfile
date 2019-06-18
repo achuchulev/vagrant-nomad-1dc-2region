@@ -15,7 +15,8 @@ Vagrant.configure("2") do |config|
       nomad.vm.network "forwarded_port", guest: 4646, host: 4646 if dc == 1
       nomad.vm.network "private_network", ip: "#{ip}.10", netmask:"255.255.0.0"
       nomad.vm.provision "shell", path: "scripts/nomad_config.sh"
-      nomad.vm.provision "shell", inline: "sudo sed -i \"s/dc1/dc#{dc}/g\" /etc/nomad.d/*.hcl"
+      nomad.vm.provision "shell", inline: "sed -i \"s/dc1/dc#{dc}/g\" /etc/nomad.d/*.hcl"
+      nomad.vm.provision "shell", path: "https://raw.githubusercontent.com/kikitux/curl-bash/master/provision/docker.sh"
       nomad.vm.provision "shell", path: "scripts/nomad_service.sh"
     end
     
