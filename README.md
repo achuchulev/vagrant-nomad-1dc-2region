@@ -11,8 +11,8 @@
 ##### Get the repo and bring up the environment
 
 ```
-$ git clone https://github.com/achuchulev/vagrant-nomad-1dc-2region.git
-$ cd vagrant-nomad-1dc-2region
+$ git clone https://github.com/achuchulev/vagrant-nomad-2dc-1region.git
+$ cd vagrant-nomad-2dc-1region
 $ vagrant up
 ```
 
