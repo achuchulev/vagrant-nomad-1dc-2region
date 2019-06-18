@@ -1,5 +1,4 @@
-# Cache objects
-packer_cache/
-
-# For built boxes
-*.box
+.vagrant
+.kitchen
+.ruby-version
+Gemfile.lock
